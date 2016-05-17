@@ -1,0 +1,17 @@
+<h1>Physicians</h1>
+<a href="/appointments/new_physician/">Add New Physician</a>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+  </tr>
+    {% for physician in object_list %}
+    <tr>
+      <td>{{physician.user.first_name}}</td>
+      <td>{{physician.user.last_name}}</td>
+      <td>{{physician.user.email}}</td>
+    </tr>
+    {% endfor %}
+</table>
+

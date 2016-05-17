@@ -1,0 +1,6 @@
+<h2>Add a New Appointment</h2>
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    {{form.time}}
+    <input type="submit" value="Submit" />
+</form>
