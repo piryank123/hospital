@@ -6,7 +6,7 @@
     <th>Last Name</th>
     <th>Email</th>
   </tr>
-    {% for physician in object_list %}
+    {% for physician in physicians %}
     <tr>
       <td>{{physician.user.first_name}}</td>
       <td>{{physician.user.last_name}}</td>

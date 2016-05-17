@@ -6,7 +6,7 @@
     <th>Time</th>
     <th>Status</th>
   </tr>
-    {% for appointment in object_list %}
+    {% for appointment in appointments %}
     <tr>
       <td>{{appointment.user.first_name}} {{appoitnment.physician.user.first_name}}</td>
       <td>{{appointment.patient_id}}</td>
