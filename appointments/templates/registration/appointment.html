@@ -19,7 +19,9 @@
   </div>
   <script type="text/javascript">
             $(function () {
-                $('#datetimepicker1').datetimepicker();
+              $('#datetimepicker1').datetimepicker({
+                "format": "YYYY-M-D  h:mm:ss"
+              });
             });
         </script>
   Status: {{ form.status }}
