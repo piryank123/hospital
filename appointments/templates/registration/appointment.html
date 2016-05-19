@@ -11,19 +11,19 @@
   {% csrf_token %}
   Physician: {{ form.physician }}<br/>
   Patient: {{ form.patient }}<br/>
-  <div class='input-group date' id='datetimepicker1'>
+  <div class='input-group date' id='datetimepicker4'>
     Time: {{ form.time }}
-    <span class="input-group-addon">
+    <span class="input-group-addon"  style="position:fixed;top:120px;left:200px;">
       <span class="glyphicon glyphicon-calendar"></span>
     </span>
   </div>
   <script type="text/javascript">
             $(function () {
-              $('#datetimepicker1').datetimepicker({
+              $('#datetimepicker4').datetimepicker({
                 "format": "YYYY-M-D  h:mm:ss"
               });
             });
         </script>
-  Status: {{ form.status }}
+        <br/>Status: {{ form.status }}
     <input type="submit" value="Submit" />
 </form>

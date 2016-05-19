@@ -25,7 +25,7 @@ class Patient(models.Model):
 class Appointment(models.Model):
     physician = models.ForeignKey(Physician)
     patient = models.ForeignKey(Patient)
-    time = models.DateTimeField('datetime',null=True)
+    time = models.DateTimeField('datetime')
     status = models.CharField(max_length = 20)
 
     def __str__(self):

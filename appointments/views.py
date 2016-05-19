@@ -27,7 +27,7 @@ def auth_view(request):
         return HttpResponseRedirect('/loggedin/')
     else:
 
-        return HttpResponseRedirect('invalid/')
+        return HttpResponseRedirect('/invalid/')
 
 def loggedin(request):
     return render_to_response('registration/loggedin.html',{'full_name': request.user.username})
