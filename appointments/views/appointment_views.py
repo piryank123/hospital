@@ -19,7 +19,7 @@ from appointments.forms import AppointmentForm
 
 class LoginRequiredMixin(object):
 
-    @method_decorator(login_required)
+    @method_decorator(login_required(login_url='appointments:login'))
     def dispatch(self, *args, **kwargs):
         return super(LoginRequiredMixin, self).dispatch(*args, **kwargs)
 
