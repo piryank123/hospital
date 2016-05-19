@@ -32,7 +32,7 @@ class PhysicianView(View):
                     last_name = form.cleaned_data['last_name'],
                     email = form.cleaned_data['email'],
                     )
-                physician = Physician.objects.create(user=user)
+                physician = Physician.objects.create(user_id=user.id)
 
         return HttpResponseRedirect('/appointments/physicians/')
 

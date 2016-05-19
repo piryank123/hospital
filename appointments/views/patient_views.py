@@ -1,15 +1,13 @@
-from django.shortcuts import get_object_or_404, render, redirect, render_to_response
+from django.shortcuts import render, redirect, render_to_response
 from django.http import HttpResponseRedirect, HttpResponse, Http404
-from django.views.generic import TemplateView, ListView, View
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, View
 from django.core.urlresolvers import reverse_lazy
 from django.template import RequestContext
 from django.contrib.auth.models import User
-from django.db import models
 from django.db import transaction
 from django.views.decorators.csrf import csrf_protect
 
-from appointments.models import Physician, Patient, Appointment
+from appointments.models import Patient
 from appointments.forms import RegistrationForm
 
 # Patient Views
@@ -35,7 +33,7 @@ class PatientView(View):
                     last_name = form.cleaned_data['last_name'],
                     email = form.cleaned_data['email'],
                     )
-                patient = Patient.objects.create(user=user)
+                patient = Patient.objects.create(user_id = user.id)
 
-        return HttpResponseRedirect('patients/')
+        return HttpResponseRedirect('/patients/')
 

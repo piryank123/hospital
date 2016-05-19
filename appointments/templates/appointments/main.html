@@ -1,1 +1,37 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
 <h1>Welcome to Hospital Appointment System</h1>
+<div class="container">
+  <div class="btn-group">
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Appointments
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="/new_appointment/">Add New Appointments</a></li>
+        <li><a href="/appointments/">View Appointments</a></li>
+      </ul>
+  	</div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Physicians
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="/new_physician/">Add New Physician</a></li>
+        <li><a href="/physicians/">View Physicians</a></li>
+      </ul>
+  	</div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Patients
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="/new_patient/">Add New Patient</a></li>
+        <li><a href="/patients/">View Patients</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -23,10 +23,11 @@ class Patient(models.Model):
 
 
 class Appointment(models.Model):
-    physician = models.OneToOneField(Physician, unique = False)
-    patient = models.OneToOneField(Patient, unique = False)
-    time = models.DateTimeField('datetime')
+    physician = models.ForeignKey(Physician)
+    patient = models.ForeignKey(Patient)
+    time = models.DateTimeField('datetime',null=True)
     status = models.CharField(max_length = 20)
 
     def __str__(self):
         return str(self.time)
+

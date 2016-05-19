@@ -1,0 +1,27 @@
+{% load static from staticfiles %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+   <script src="{% static 'appointments/moment.min.js' %}"></script>
+   <script src="{% static 'appointments/bootstrap-datetimepicker.min.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'appointments/bootstrap-datetimepicker.min.css' %}" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<a href="/">Home</a>
+<h2> Add a new {{name}}</h2>
+<form method="POST">
+  {% csrf_token %}
+  Physician: {{ form.physician }}<br/>
+  Patient: {{ form.patient }}<br/>
+  <div class='input-group date' id='datetimepicker1'>
+    Time: {{ form.time }}
+    <span class="input-group-addon">
+      <span class="glyphicon glyphicon-calendar"></span>
+    </span>
+  </div>
+  <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+  Status: {{ form.status }}
+    <input type="submit" value="Submit" />
+</form>
